@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תחרות הכפילים של ישראל אהרוני</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header class="hero-container">
+    <div class="hero-overlay"></div>
+        <div class="hero-right">
+            <h1>תחרות הכפילים של ישראל אהרוני</h1>
+            <div class="hero-meta">
+                <span class="location"> אולפני הרצליה</span>
+                <span class="date"> 15.08.2026</span>
+            </div>
+        </div>
+        <div class="hero-left">
+            <a href="#nomination-form" class="blinking-btn">הגשת מועמדות</a>
+        </div>
+    </header>
+
+    <main class="prizes-container">
+        
+        <section class="prize-card scroll-section">
+            <div class="prize-image">
+                <img src="knife.jpg" alt="פרס מקום ראשון">
+            </div>
+            <div class="prize-content">
+                <h2>מקום ראשון</h2>
+                <p>סט סכיני שף מקצועי חתום על ידי אהרוני, סיור קולינרי בשווקים המובילים, וארוחת ערב פרטית שהוא יבשל אצלכם בבית!</p>
+            </div>
+        </section>
+
+        <section class="prize-card scroll-section">
+            <div class="prize-image">
+                <img src="side face.jpg" alt="פרס מקום שני">
+            </div>
+            <div class="prize-content">
+                <h2>מקום שני</h2>
+                <p>סיר קדירה יוקרתי מברזל יצוק, סדנת בישול אסייתי מתקדמת, וארגז חומרי גלם נדירים מהמזרח הרחוק.</p>
+            </div>
+        </section>
+
+        <section class="prize-card scroll-section">
+            <div class="prize-image">
+                <img src="burger.jpg" alt="פרס מקום שלישי">
+            </div>
+            <div class="prize-content">
+                <h2>מקום שלישי</h2>
+                <p>ספר המתכונים המיתולוגי של אהרוני עם הקדשה אישית, וסינר מטבח רשמי של התחרות עם גבות רקומות.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <section id="contact-form" class="form-section">
+            
+           <section id="nomination-form" class="form-container">
+        <form id="aharoni-form" action="thankyou.html">
+                    <h2>הגשת מועמד לתחרות:</h2>
+
+            
+            <div class="form-group">
+                <label for="name">שם מלא *</label>
+                <input type="text" id="name" required placeholder="ישראל אהרוני">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">טלפון *</label>
+                <input type="tel" id="phone" required placeholder="050-0000000">
+            </div>
+
+            <div class="form-group">
+                <label for="email">אימייל *</label>
+                <input type="email" id="email" required placeholder="aharoni@double.com">
+            </div>
+
+            <div class="form-group">
+                <label>את מי את/ה רושם לתחרות?</label>
+                <div class="radio-group">
+                    <input type="radio" id="submit-self" name="nominee_type" value="self" checked>
+                    <label for="submit-self">את עצמי</label>
+                    
+                    <input type="radio" id="submit-friend" name="nominee_type" value="friend">
+                    <label for="submit-friend">חבר/ה </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description">תאר/י את המועמד :</label>
+                <textarea id="description" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">שלח מועמדות!</button>
+        </form>
+        
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

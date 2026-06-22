@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80vh;
+    padding: 40px;
+    background-image: url("sticks.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b3;
+    backdrop-filter: blur(5px);
+    z-index: 0;
+
+}
+
+.hero-right {
+    flex: 2;
+    max-width: 65%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-right h1 {
+    font-size: 3.5rem;
+    color: #ffcc00; 
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-meta {
+    display: flex;
+    /* gap: 40px; */
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.hero-left {
+    margin-top: 25px;
+    margin-left: 20px;
+    left: 50px;
+    top: 20px;
+    z-index: 999;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+
+
+.blinking-btn {
+
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    animation: blink 1.5s infinite ease-in-out;
+    transition: transform 0.2s;
+}
+
+.blinking-btn:hover {
+    transform: scale(1.1);
+    background-color: #e6b800;
+}
+
+@keyframes blink {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.prizes-container {
+    max-width: 80%;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.prize-card {
+    display: flex;
+    align-items: stretch;
+    min-height: 320px;
+    background-color: rgba(255, 255, 255, 0.05);
+    margin-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.prize-image {
+    flex: 1;
+    max-width: 300px;
+}
+
+.prize-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prize-content {
+    flex: 2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 5px solid #ffcc00;
+    border-left: 5px solid #ffcc00; 
+}
+
+.prize-content h2 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.scroll-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    animation: revealOnScroll linear both;
+    animation-timeline: view();
+    animation-range: entry 0% Document cover 40%;
+}
+@keyframes revealOnScroll {
+    from {
+        opacity: 0;
+        transform: translateY(100px) scale(0.70);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.scroll-section.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: #000000;
+}
+.form-container h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group textarea {
+    padding: 12px;
+    background-color: #1a1a1a;
+    border: 1px solid #ffcc00;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.radio-group input {
+    accent-color: #ffcc00; 
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffcc00;
+    color: #000000;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #e6b800db;
+}
+.thankyou-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.thankyou-container h1 {
+    font-size: 3rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .hero-right {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero-right h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-meta {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hero-left {
+        align-items: center;
+        width: 100%;
+    }
+
+
+
+    .blinking-btn {
+        align-self: center;
+    }
+
+    .prize-card {
+        flex-direction: column;
+    }
+    .prize-content{
+     border-right: 5px solid #ffcc00;
+
+    }
+
+    .prize-image {
+        max-width: 100%;
+    }
+}
